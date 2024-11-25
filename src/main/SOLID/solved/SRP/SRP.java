@@ -17,7 +17,7 @@ public class SRP {
         }
     }
 
-    class CitationGenerator {
+    class CitationGenerator { //generating citation is now on its own class, BookRef now has a single responsibility
         public String generateBookAPA(BookRef book) {
             return book.author + " (" + book.year + "). " + book.title + ". " + book.city + ": " + book.publisher;
         }

@@ -17,7 +17,7 @@ public class OCP {
         }
     }
 
-    class CitationGenerator {
+    class CitationGenerator { //if adding more citation styles is wanted, separate class should be created
         public String generateBookAPA(BookRef book) {
             return book.author + " (" + book.year + "). " + book.title + ". " + book.city + ": " + book.publisher;
         }

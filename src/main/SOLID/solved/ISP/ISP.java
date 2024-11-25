@@ -41,11 +41,12 @@ public class ISP {
         String generateCitation(BookRef book);
     }
 
+    //now journal citations are on its own interface and only classes that aims to use can use it
     interface JournalCitation {
         String generateCitation(JournalRef journal);
     }
 
-    class BookAPA implements BookCitation {
+    class BookAPA implements BookCitation { //this class now strictly implements the citation interface for books
         @Override
         public String generateCitation(BookRef book){
             return book.author + " (" + book.year + "). " + book.title + ". " + book.city + ": " + book.publisher;
@@ -59,7 +60,7 @@ public class ISP {
         }
     }
 
-    class JournalAPA implements JournalCitation {
+    class JournalAPA implements JournalCitation { //this class now strictly implements the interface for journals
         @Override
         public String generateCitation(JournalRef journal){
             return journal.author + " (" + journal.year + "). " + journal.title + ". " + journal.journalName + ", " +

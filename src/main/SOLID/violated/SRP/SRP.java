@@ -16,6 +16,7 @@ public class SRP {
             this.publisher = publisher;
         }
 
+        //returning the citation string based on the BookRef should be in a different class
         public String citation() {
             return author + " (" + year + "). " + title + ". " + city + ": " + publisher;
         }

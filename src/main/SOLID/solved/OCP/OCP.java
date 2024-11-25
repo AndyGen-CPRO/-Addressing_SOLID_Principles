@@ -17,11 +17,11 @@ public class OCP {
         }
     }
 
-    interface Citation {
+    interface Citation { //now this keeps it closed for modifications
         String generateCitation(BookRef book);
     }
 
-    class APA implements Citation{
+    class APA implements Citation{ //the styles of citation are now on their own classes
         @Override
         public String generateCitation(BookRef book){
             return book.author + " (" + book.year + "). " + book.title + ". " + book.city + ": " + book.publisher;
